@@ -19,6 +19,7 @@ body {
 
 .month {
     font-size: 5vw;
+    flex-shrink: 0;
 }
 
 .days {
