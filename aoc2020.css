@@ -1,0 +1,43 @@
+body {
+  background: #0f0f23; /*337 x 5*/
+  color: #cccccc;
+  font-family: "Source Code Pro", monospace;
+  font-size: 14pt;
+  text-align: center;
+  vertical-align: middle;
+  width: 100%;
+  margin: 0;
+  border: none;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.month {
+    font-size: 5vw;
+}
+
+.days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.cells {
+    border: 1px solid #cccccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dates {
+    font-size: 10vw;
+}
+
+.puzzle {
+    color: white;
+    font-weight: bold;
+}
