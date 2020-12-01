@@ -1,6 +1,8 @@
 window.onload = init;
 
 let info = new Map();
+let solutions = new Map();
+solutions.set("1", {part1: "Day1/Puzzle1.html", part2: "Day1/Puzzle2.html"})
 
 function init()
 {
@@ -34,23 +36,49 @@ function showInfo(event)
 {
     let dateInfo = info.get(event.target.id);
     console.log("Entered " + event.target.id + ": " + dateInfo.unlockTime);
-    if (Date.now() < dateInfo.unlockTime && dateInfo.timer == 0)
+    dateInfo.content.style.display = "none";
+    let newDiv = document.createElement("div");
+    event.target.append(newDiv);
+    if (Date.now() < dateInfo.unlockTime)
     {
-        dateInfo.content.style.display = "none";
-        let newDiv = document.createElement("div");
-        event.target.append(newDiv);
-        countdown(newDiv, dateInfo.unlockTime);
-        dateInfo.timer = window.setInterval(countdown, 1000, newDiv, dateInfo.unlockTime);
-        info.set(event.target.id, dateInfo);
-        event.target.onmouseleave = function (event) {
-            console.log("Left " + event.target.id);
-            let dateInfo = info.get(event.target.id);
+        if (dateInfo.timer == 0)
+        {
+            countdown(newDiv, dateInfo.unlockTime);
+            dateInfo.timer = window.setInterval(countdown, 1000, newDiv, dateInfo.unlockTime);
+            info.set(event.target.id, dateInfo);
+        }
+    }
+    else
+    {
+        let anchor = document.createElement("a");
+        newDiv.append(anchor);
+        anchor.innerText = "Puzzles";
+        anchor.href = "https://adventofcode.com/2020/day/" + event.target.id;
+        if (solutions.has(event.target.id))
+        {
+            newDiv.append(document.createElement("br"));
+            anchor = document.createElement("a");
+            newDiv.append(anchor);
+            anchor.innerText = "Part 1 Solution";
+            anchor.href = solutions.get(event.target.id).part1;
+            newDiv.append(document.createElement("br"));
+            anchor = document.createElement("a");
+            newDiv.append(anchor);
+            anchor.innerText = "Part 2 Solution";
+            anchor.href = solutions.get(event.target.id).part2;
+        }
+    }
+    event.target.onmouseleave = function (event) {
+        console.log("Left " + event.target.id);
+        let dateInfo = info.get(event.target.id);
+        if (dateInfo.timer > 0)
+        {
             window.clearInterval(dateInfo.timer);
             dateInfo.timer = 0;
             info.set(event.target.id, dateInfo);
-            newDiv.remove();
-            dateInfo.content.style.display = "";
         }
+        newDiv.remove();
+        dateInfo.content.style.display = "";
     }
 }
 
