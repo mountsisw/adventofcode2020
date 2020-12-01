@@ -7,15 +7,18 @@ function init()
     loadValues();
     let inputDiv = document.getElementById("input");
     for (let loop1 = 0; loop1 < aValues.length - 1; loop1++)
-        for (let loop2 = 1; loop2 <= aValues.length; loop2++)
-            if (aValues[loop1] + aValues[loop2] == 2020)
+    {
+        let target = 2020 - aValues[loop1];
+        for (let loop2 = loop1 + 1; loop2 < aValues.length; loop2++)
+            if (aValues[loop2] == target)
             {
                 inputDiv.innerText = aValues[loop1] + " + " + aValues[loop2] + " = 2020"
                 let outputDiv = document.getElementById("output");
-                outputDiv.innerText = aValues[loop1] + " * " + aValues[loop2] + " = " +
+                outputDiv.innerText = aValues[loop1] + " x " + aValues[loop2] + " = " +
                     aValues[loop1] * aValues[loop2];
                 return;
             }
+    }
     inputDiv.innerText = "No solution found!";    
 }
 
