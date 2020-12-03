@@ -4,7 +4,7 @@ let info = new Map();
 let solutions = new Map();
 solutions.set("1", {part1: "Day1/Puzzle1.html", part2: "Day1/Puzzle2.html"});
 solutions.set("2", {part1: "Day2/Puzzle1.html", part2: "Day2/Puzzle2.html"});
-solutions.set("2", {part1: "Day3/Puzzle1.html", part2: "Day3/Puzzle2.html"});
+solutions.set("3", {part1: "Day3/Puzzle1.html", part2: "Day3/Puzzle2.html"});
 
 function init()
 {
