@@ -45,5 +45,10 @@ body {
 
 .d2p1 {
     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.d4p1 {
+    display: grid;
     grid-template-columns: 1fr auto;
 }
