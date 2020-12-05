@@ -10,6 +10,15 @@ body {
   border: none;
 }
 
+a {
+    color: #cccccc;
+}
+
+a:hover {
+    color: white;
+    font-weight: bolder;
+}
+
 .header {
     width: 100%;
     display: flex;
@@ -20,6 +29,7 @@ body {
 .month {
     font-size: 5vw;
     flex-shrink: 0;
+    font-weight: bolder;
 }
 
 .days {
@@ -32,6 +42,10 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    background-position: center;
 }
 
 .dates {
@@ -40,7 +54,7 @@ body {
 
 .puzzle {
     color: white;
-    font-weight: bold;
+    font-weight: bolder;
 }
 
 .d2p1 {
@@ -51,4 +65,9 @@ body {
 .d4p1 {
     display: grid;
     grid-template-columns: 1fr auto;
+}
+
+.d5p1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
 }

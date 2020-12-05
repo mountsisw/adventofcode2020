@@ -2,10 +2,11 @@ window.onload = init;
 
 let info = new Map();
 let solutions = new Map();
-solutions.set("1", {part1: "Day1/Puzzle1.html", part2: "Day1/Puzzle2.html"});
-solutions.set("2", {part1: "Day2/Puzzle1.html", part2: "Day2/Puzzle2.html"});
-solutions.set("3", {part1: "Day3/Puzzle1.html", part2: "Day3/Puzzle2.html"});
-solutions.set("4", {part1: "Day4/Puzzle1.html", part2: "Day4/Puzzle2.html"});
+solutions.set("1", {part1: "Day1/Puzzle1.html", part2: "Day1/Puzzle2.html", bg: "Day1/Day1.png"});
+solutions.set("2", {part1: "Day2/Puzzle1.html", part2: "Day2/Puzzle2.html", bg: "Day2/Day2.png"});
+solutions.set("3", {part1: "Day3/Puzzle1.html", part2: "Day3/Puzzle2.html", bg: "Day3/Day3.png"});
+solutions.set("4", {part1: "Day4/Puzzle1.html", part2: "Day4/Puzzle2.html", bg: "Day4/Day4.jpg"});
+solutions.set("5", {part1: "Day5/Puzzle1.html", part2: "Day5/Puzzle2.html", bg: "Day5/Day5.png"});
 
 function init()
 {
@@ -13,7 +14,7 @@ function init()
     let firstPuzzle = Date.UTC(2020, 11, 1, 5, 0, 0);
     let lastPuzzle = Date.UTC(2020, 11, 25, 5, 0, 0);
     let containerDiv = document.getElementById("days");
-    for (let nLoop = 1; nLoop <= 35; nLoop++)
+    for (let nLoop = 1; nLoop <= 28; nLoop++)
     {
         let cellDiv = document.createElement("div");
         cellDiv.className = "cells";
@@ -28,6 +29,7 @@ function init()
             cellDiv.id = dateString;
             cellDiv.onmouseenter = showInfo;
             info.set(dateString, {unlockTime: firstDate, timer: 0, content: dateDiv});
+            if (solutions.has(dateString)) cellDiv.style.backgroundImage = "url(" + solutions.get(dateString).bg + ")";
         }
         cellDiv.append(dateDiv);
         containerDiv.append(cellDiv);
