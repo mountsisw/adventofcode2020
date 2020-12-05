@@ -2,11 +2,11 @@ window.onload = init;
 
 let info = new Map();
 let solutions = new Map();
-solutions.set("1", {part1: "Day1/Puzzle1.html", part2: "Day1/Puzzle2.html", bg: "Day1/Day1.png"});
-solutions.set("2", {part1: "Day2/Puzzle1.html", part2: "Day2/Puzzle2.html", bg: "Day2/Day2.png"});
-solutions.set("3", {part1: "Day3/Puzzle1.html", part2: "Day3/Puzzle2.html", bg: "Day3/Day3.png"});
-solutions.set("4", {part1: "Day4/Puzzle1.html", part2: "Day4/Puzzle2.html", bg: "Day4/Day4.jpg"});
-solutions.set("5", {part1: "Day5/Puzzle1.html", part2: "Day5/Puzzle2.html", bg: "Day5/Day5.png"});
+solutions.set("1", {title: "Report Repair", part1: "Day1/Puzzle1.html", part2: "Day1/Puzzle2.html", bg: "Day1/Day1.png"});
+solutions.set("2", {title: "Password Philosophy", part1: "Day2/Puzzle1.html", part2: "Day2/Puzzle2.html", bg: "Day2/Day2.png"});
+solutions.set("3", {title: "Toboggan Trajectory", part1: "Day3/Puzzle1.html", part2: "Day3/Puzzle2.html", bg: "Day3/Day3.png"});
+solutions.set("4", {title: "Passport Processing", part1: "Day4/Puzzle1.html", part2: "Day4/Puzzle2.html", bg: "Day4/Day4.jpg"});
+solutions.set("5", {title: "Binary Boarding", part1: "Day5/Puzzle1.html", part2: "Day5/Puzzle2.html", bg: "Day5/Day5.png"});
 
 function init()
 {
@@ -53,25 +53,30 @@ function showInfo(event)
             info.set(event.target.id, dateInfo);
         }
     }
+    else if (solutions.has(event.target.id))
+    {
+        let solution = solutions.get(event.target.id);
+        let anchor = document.createElement("a");
+        newDiv.append(anchor);
+        anchor.innerText = solution.title;
+        anchor.href = "https://adventofcode.com/2020/day/" + event.target.id;
+        newDiv.append(document.createElement("br"));
+        anchor = document.createElement("a");
+        newDiv.append(anchor);
+        anchor.innerText = "Part 1";
+        anchor.href = solution.part1;
+        newDiv.append(document.createElement("br"));
+        anchor = document.createElement("a");
+        newDiv.append(anchor);
+        anchor.innerText = "Part 2";
+        anchor.href = solution.part2;
+    }
     else
     {
         let anchor = document.createElement("a");
         newDiv.append(anchor);
-        anchor.innerText = "Puzzles";
+        anchor.innerText = "Puzzle";
         anchor.href = "https://adventofcode.com/2020/day/" + event.target.id;
-        if (solutions.has(event.target.id))
-        {
-            newDiv.append(document.createElement("br"));
-            anchor = document.createElement("a");
-            newDiv.append(anchor);
-            anchor.innerText = "Part 1 Solution";
-            anchor.href = solutions.get(event.target.id).part1;
-            newDiv.append(document.createElement("br"));
-            anchor = document.createElement("a");
-            newDiv.append(anchor);
-            anchor.innerText = "Part 2 Solution";
-            anchor.href = solutions.get(event.target.id).part2;
-        }
     }
     event.target.onmouseleave = function (event) {
         console.log("Left " + event.target.id);
