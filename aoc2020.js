@@ -2,11 +2,11 @@ window.onload = init;
 
 let info = new Map();
 let solutions = new Map();
-solutions.set("1", {title: "Report Repair", part1: "Day1/Puzzle1.html", part2: "Day1/Puzzle2.html", bg: "Day1/Day1.png"});
-solutions.set("2", {title: "Password Philosophy", part1: "Day2/Puzzle1.html", part2: "Day2/Puzzle2.html", bg: "Day2/Day2.png"});
-solutions.set("3", {title: "Toboggan Trajectory", part1: "Day3/Puzzle1.html", part2: "Day3/Puzzle2.html", bg: "Day3/Day3.png"});
-solutions.set("4", {title: "Passport Processing", part1: "Day4/Puzzle1.html", part2: "Day4/Puzzle2.html", bg: "Day4/Day4.jpg"});
-solutions.set("5", {title: "Binary Boarding", part1: "Day5/Puzzle1.html", part2: "Day5/Puzzle2.html", bg: "Day5/Day5.png"});
+solutions.set("1", {title: "Report Repair", part1: "Day1/Part1.html", part2: "Day1/Part2.html", bg: "Day1/Day1.png"});
+solutions.set("2", {title: "Password Philosophy", part1: "Day2/Part1.html", part2: "Day2/Part2.html", bg: "Day2/Day2.png"});
+solutions.set("3", {title: "Toboggan Trajectory", part1: "Day3/Part1.html", part2: "Day3/Part2.html", bg: "Day3/Day3.png"});
+solutions.set("4", {title: "Passport Processing", part1: "Day4/Part1.html", part2: "Day4/Part2.html", bg: "Day4/Day4.jpg"});
+solutions.set("5", {title: "Binary Boarding", part1: "Day5/Part1.html", part2: "Day5/Part2.html", bg: "Day5/Day5.png"});
 
 function init()
 {
