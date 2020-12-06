@@ -7,6 +7,7 @@ solutions.set("2", {title: "Password Philosophy", part1: "Day2/Part1.html", part
 solutions.set("3", {title: "Toboggan Trajectory", part1: "Day3/Part1.html", part2: "Day3/Part2.html", bg: "Day3/Day3.png"});
 solutions.set("4", {title: "Passport Processing", part1: "Day4/Part1.html", part2: "Day4/Part2.html", bg: "Day4/Day4.jpg"});
 solutions.set("5", {title: "Binary Boarding", part1: "Day5/Part1.html", part2: "Day5/Part2.html", bg: "Day5/Day5.png"});
+solutions.set("6", {title: "Custom Customs", part1: "Day6/Part1.html", part2: "Day6/Part2.html", bg: "Day6/Day6.png"});
 
 function init()
 {
