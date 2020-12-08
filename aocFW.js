@@ -6,6 +6,9 @@ export function doPart(part) {
         if (fileChooser.files.length > 0) {
             let file = fileChooser.files[0];
             document.getElementById("fileName").innerText = file.name + " " + file.type;
+            let haveStatus = document.getElementById("status") != null;
+            if (haveStatus)
+                document.getElementById("reading").className = "puzzle";
             let fr = new FileReader();
             fr.onloadend = function () {
                 let aValues = fr.result.split("\n");
@@ -24,8 +27,17 @@ export function doPart(part) {
                     fileProgress.value = ++recordIndex;
                     if (moreRecords == true && recordIndex < maxRecords)
                         window.setTimeout(processFileRecords, 0);
-                    else
+                    else {
+                        if (haveStatus) {
+                            document.getElementById("reading").className = "";
+                            document.getElementById("solving").className = "puzzle";
+                        }
                         part.displayAnswer();
+                        if (haveStatus) {
+                            document.getElementById("solving").className = "";
+                            document.getElementById("done").className = "puzzle";
+                        }
+                    }
                 }, 0);
             };
             fr.readAsText(file);
