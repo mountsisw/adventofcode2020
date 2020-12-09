@@ -40,12 +40,15 @@ export function doPart(part: PuzzlePart)
                             document.getElementById("reading").className = "";
                             document.getElementById("solving").className = "puzzle";
                         }
-                        part.displayAnswer();
-                        if (haveStatus)
+                        window.setTimeout(function ()
                         {
-                            document.getElementById("solving").className = "";
-                            document.getElementById("done").className = "puzzle";
-                        }
+                            part.displayAnswer();
+                            if (haveStatus)
+                            {
+                                document.getElementById("solving").className = "";
+                                document.getElementById("done").className = "puzzle";
+                            }
+                        }, 0);
                     }
                 }, 0);
             }

@@ -32,11 +32,13 @@ export function doPart(part) {
                             document.getElementById("reading").className = "";
                             document.getElementById("solving").className = "puzzle";
                         }
-                        part.displayAnswer();
-                        if (haveStatus) {
-                            document.getElementById("solving").className = "";
-                            document.getElementById("done").className = "puzzle";
-                        }
+                        window.setTimeout(function () {
+                            part.displayAnswer();
+                            if (haveStatus) {
+                                document.getElementById("solving").className = "";
+                                document.getElementById("done").className = "puzzle";
+                            }
+                        }, 0);
                     }
                 }, 0);
             };
