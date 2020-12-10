@@ -11,6 +11,7 @@ solutions.set("6", {title: "Custom Customs", part1: "Day6/Part1.html", part2: "D
 solutions.set("7", {title: "Handy Haversacks", part1: "Day7/Part1.html", part2: "Day7/Part2.html", bg: "Day7/Day7.png"});
 solutions.set("8", {title: "Handheld Halting", part1: "Day8/Part1.html", part2: "Day8/Part2.html", bg: "Day8/Day8.png"});
 solutions.set("9", {title: "Encoding Error", part1: "Day9/Part1.html", part2: "Day9/Part2.html", bg: "Day9/Day9.png"});
+solutions.set("10", {title: "Adapter Array", part1: "Day10/Part1.html", part2: "Day10/Part2.html", bg: "Day10/Day10.png"});
 
 function init()
 {
