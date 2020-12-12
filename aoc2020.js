@@ -13,6 +13,7 @@ solutions.set("8", {title: "Handheld Halting", part1: "Day8/Part1.html", part2: 
 solutions.set("9", {title: "Encoding Error", part1: "Day9/Part1.html", part2: "Day9/Part2.html", bg: "Day9/Day9.png"});
 solutions.set("10", {title: "Adapter Array", part1: "Day10/Part1.html", part2: "Day10/Part2.html", bg: "Day10/Day10.png"});
 solutions.set("11", {title: "Seating System", part1: "Day11/Part1.html", part2: "Day11/Part2.html", bg: "Day11/Day11.png"});
+solutions.set("12", {title: "Rain Risk", part1: "Day12/Part1.html", part2: "Day12/Part2.html", bg: "Day12/Day12.png"});
 
 function init()
 {
