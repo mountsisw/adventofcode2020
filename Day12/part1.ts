@@ -10,14 +10,12 @@ class PuzzleSolution extends PuzzlePart
     private y: number;
     private xChange: number;
     private yChange: number;
-    private direction: string;
 
     // called after a file is selected, prior to processing
     public init(inputElement: HTMLDivElement, outputElement: HTMLDivElement, answerElement: HTMLDivElement)
     {
         super.init(inputElement, outputElement, answerElement);
         this.x = this.y = 0;
-        this.direction = "E";
         this.xChange = 1;
         this.yChange = 0;
     }
@@ -33,69 +31,30 @@ class PuzzleSolution extends PuzzlePart
             if (instruction == "S") this.y -= magnitude;
             if (instruction == "E") this.x += magnitude;
             if (instruction == "W") this.x -= magnitude;
-            if (instruction == "L")
-            {
-                if (magnitude == 90)
-                {
-                    if (this.direction == "E") this.direction = "N";
-                    else if (this.direction == "N") this.direction = "W";
-                    else if (this.direction == "W") this.direction = "S";
-                    else if (this.direction == "S") this.direction = "E";
-                }
-                else if (magnitude == 180)
-                {
-                    if (this.direction == "E") this.direction = "W";
-                    else if (this.direction == "N") this.direction = "S";
-                    else if (this.direction == "W") this.direction = "E";
-                    else if (this.direction == "S") this.direction = "N";
-                }
-                else if (magnitude == 270)
-                {
-                    if (this.direction == "E") this.direction = "S";
-                    else if (this.direction == "N") this.direction = "E";
-                    else if (this.direction == "W") this.direction = "N";
-                    else if (this.direction == "S") this.direction = "W";
-                }
-                else console.error("Unexpected turn " + record);
-            }
-            if (instruction == "R")
-            {
-                if (magnitude == 90)
-                {
-                    if (this.direction == "E") this.direction = "S";
-                    else if (this.direction == "N") this.direction = "E";
-                    else if (this.direction == "W") this.direction = "N";
-                    else if (this.direction == "S") this.direction = "W";
-                }
-                else if (magnitude == 180)
-                {
-                    if (this.direction == "E") this.direction = "W";
-                    else if (this.direction == "N") this.direction = "S";
-                    else if (this.direction == "W") this.direction = "E";
-                    else if (this.direction == "S") this.direction = "N";
-                }
-                else if (magnitude == 270)
-                {
-                    if (this.direction == "E") this.direction = "N";
-                    else if (this.direction == "N") this.direction = "W";
-                    else if (this.direction == "W") this.direction = "S";
-                    else if (this.direction == "S") this.direction = "E";
-                }
-                else console.error("Unexpected turn " + record);
-            }
-            if (instruction == "L" || instruction == "R")
-            {
-                if (this.direction == "E") { this.xChange = 1; this.yChange = 0; }
-                if (this.direction == "N") { this.xChange = 0; this.yChange = 1; }
-                if (this.direction == "W") { this.xChange = -1; this.yChange = 0; }
-                if (this.direction == "S") { this.xChange = 0; this.yChange = -1; }
-            }
             if (instruction == "F")
             {
                 this.x += magnitude * this.xChange;
                 this.y += magnitude * this.yChange;
             }
-            console.log(this.x + ", " + this.y + ", " + this.direction);
+            if (record == "L90" || record == "R270")
+            {
+                if (Math.abs(this.xChange) == 1) { this.yChange = this.xChange; this.xChange = 0; }
+                else { this.xChange = this.yChange * -1; this.yChange = 0; }
+            }
+            else if (record == "R90" || record == "L270")
+            {
+                if (Math.abs(this.xChange) == 1) { this.yChange = this.xChange * -1; this.xChange = 0; }
+                else { this.xChange = this.yChange; this.yChange = 0; }
+            }
+            else if (record == "L180" || record == "R180")
+            {
+                this.xChange = this.xChange * -1;
+                this.yChange = this.yChange * -1;
+            }
+            else if (instruction == "L" || instruction == "R") console.error("Unexpected turn " + record);
+            this.inputDisplay.innerText = record;
+            this.outputDisplay.innerText = "(" + this.x + "," + this.y + "), (" + this.xChange + "," + this.yChange + ")";
+            console.log(record + ": (" + this.x + "," + this.y + "), (" + this.xChange + "," + this.yChange + ")");
         }
         return true;
     }
