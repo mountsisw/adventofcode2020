@@ -9,9 +9,14 @@ export function doPart(part: PuzzlePart)
         if (fileChooser.files.length > 0)
         {
             let file: File = fileChooser.files[0];
-            document.getElementById("fileName").innerText = file.name + " " + file.type;
+            document.getElementById("fileName").innerText = " => " + file.name + ", " + file.type;
             let haveStatus: Boolean = document.getElementById("status") != null;
-            if (haveStatus) document.getElementById("reading").className = "puzzle";
+            if (haveStatus)
+            {
+                document.getElementById("reading").className = "puzzle";
+                document.getElementById("solving").className = "";
+                document.getElementById("done").className = "";
+            }
             let fr: FileReader = new FileReader();
             fr.onloadend = function ()
             {

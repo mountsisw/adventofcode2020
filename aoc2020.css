@@ -19,6 +19,11 @@ a:hover {
     font-weight: bolder;
 }
 
+label:hover {
+    color: white;
+    outline: 1px solid;
+}
+
 .header {
     width: 100%;
     display: flex;

@@ -5,10 +5,13 @@ export function doPart(part) {
     fileChooser.onchange = function (event) {
         if (fileChooser.files.length > 0) {
             let file = fileChooser.files[0];
-            document.getElementById("fileName").innerText = file.name + " " + file.type;
+            document.getElementById("fileName").innerText = " => " + file.name + ", " + file.type;
             let haveStatus = document.getElementById("status") != null;
-            if (haveStatus)
+            if (haveStatus) {
                 document.getElementById("reading").className = "puzzle";
+                document.getElementById("solving").className = "";
+                document.getElementById("done").className = "";
+            }
             let fr = new FileReader();
             fr.onloadend = function () {
                 let aValues = fr.result.split("\n");
