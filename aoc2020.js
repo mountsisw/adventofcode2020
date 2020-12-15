@@ -16,6 +16,7 @@ solutions.set("11", {title: "Seating System", part1: "Day11/Part1.html", part2: 
 solutions.set("12", {title: "Rain Risk", part1: "Day12/Part1.html", part2: "Day12/Part2.html", bg: "Day12/Day12.png"});
 solutions.set("13", {title: "Shuttle Search", part1: "Day13/Part1.html", part2: "Day13/Part2.html", bg: "Day13/Day13.png"});
 solutions.set("14", {title: "Docking Data", part1: "Day14/Part1.html", part2: "Day14/Part2.html", bg: "Day14/Day14.png"});
+solutions.set("15", {title: "Rambunctious Recitation", part1: "Day15/Part1.html", part2: "Day15/Part2.html", bg: "Day15/Day15.png"});
 
 function init()
 {
