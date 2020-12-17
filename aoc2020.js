@@ -18,6 +18,7 @@ solutions.set("13", {title: "Shuttle Search", part1: "Day13/Part1.html", part2: 
 solutions.set("14", {title: "Docking Data", part1: "Day14/Part1.html", part2: "Day14/Part2.html", bg: "Day14/Day14.png"});
 solutions.set("15", {title: "Rambunctious Recitation", part1: "Day15/Part1.html", part2: "Day15/Part2.html", bg: "Day15/Day15.png"});
 solutions.set("16", {title: "Ticket Translation", part1: "Day16/Part1.html", part2: "Day16/Part2.html", bg: "Day16/Day16.png"});
+solutions.set("17", {title: "Conway Cubes", part1: "Day17/Part1.html", part2: "Day17/Part2.html", bg: "Day17/Day17.png"});
 
 function init()
 {
