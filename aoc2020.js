@@ -20,6 +20,7 @@ solutions.set("15", {title: "Rambunctious Recitation", part1: "Day15/Part1.html"
 solutions.set("16", {title: "Ticket Translation", part1: "Day16/Part1.html", part2: "Day16/Part2.html", bg: "Day16/Day16.png"});
 solutions.set("17", {title: "Conway Cubes", part1: "Day17/Part1.html", part2: "Day17/Part2.html", bg: "Day17/Day17.png"});
 solutions.set("18", {title: "Operation Order", part1: "Day18/Part1.html", part2: "Day18/Part2.html", bg: "Day18/Day18.png"});
+solutions.set("19", {title: "Monster Messages", part1: "Day19/Part1.html", part2: "Day19/Part2.html", bg: "Day19/Day19.png"});
 
 function init()
 {
