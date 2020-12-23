@@ -24,6 +24,7 @@ solutions.set("19", {title: "Monster Messages", part1: "Day19/Part1.html", part2
 // solutions.set("20", {title: "Jurassic Jigsaw", part1: "Day20/Part1.html", part2: "Day20/Part2.html", bg: "Day20/Day20.png"});
 solutions.set("21", {title: "Allergen Assessment", part1: "Day21/Part1.html", part2: "Day21/Part2.html", bg: "Day21/Day21.png"});
 solutions.set("22", {title: "Crab Combat", part1: "Day22/Part1.html", part2: "Day22/Part2.html", bg: "Day22/Day22.png"});
+solutions.set("23", {title: "Crab Cups", part1: "Day23/Part1.html", part2: "Day23/Part2.html", bg: "Day23/Day23.png"});
 
 function init()
 {
