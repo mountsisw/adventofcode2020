@@ -21,7 +21,7 @@ solutions.set("16", {title: "Ticket Translation", part1: "Day16/Part1.html", par
 solutions.set("17", {title: "Conway Cubes", part1: "Day17/Part1.html", part2: "Day17/Part2.html", bg: "Day17/Day17.png"});
 solutions.set("18", {title: "Operation Order", part1: "Day18/Part1.html", part2: "Day18/Part2.html", bg: "Day18/Day18.png"});
 solutions.set("19", {title: "Monster Messages", part1: "Day19/Part1.html", part2: "Day19/Part2.html", bg: "Day19/Day19.png"});
-// solutions.set("20", {title: "Jurassic Jigsaw", part1: "Day20/Part1.html", part2: "Day20/Part2.html", bg: "Day20/Day20.png"});
+solutions.set("20", {title: "Jurassic Jigsaw", part1: "Day20/Part1.html", part2: "Day20/Part2.html", bg: "Day20/Day20.png"});
 solutions.set("21", {title: "Allergen Assessment", part1: "Day21/Part1.html", part2: "Day21/Part2.html", bg: "Day21/Day21.png"});
 solutions.set("22", {title: "Crab Combat", part1: "Day22/Part1.html", part2: "Day22/Part2.html", bg: "Day22/Day22.png"});
 solutions.set("23", {title: "Crab Cups", part1: "Day23/Part1.html", part2: "Day23/Part2.html", bg: "Day23/Day23.png"});

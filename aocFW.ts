@@ -10,7 +10,7 @@ export function doPart(part: PuzzlePart)
         {
             let file: File = fileChooser.files[0];
             document.getElementById("fileName").innerText = " => " + file.name + ", " + file.type;
-            let haveStatus: Boolean = document.getElementById("status") != null;
+            let haveStatus: boolean = document.getElementById("status") != null;
             if (haveStatus)
             {
                 document.getElementById("reading").className = "puzzle";
@@ -21,7 +21,6 @@ export function doPart(part: PuzzlePart)
             fr.onloadend = function ()
             {
                 let aValues: Array<string> = (<String> fr.result).split("\n");
-                // console.log(aValues);
                 let maxRecords: number = aValues.length;
                 document.getElementById("recordCount").innerText = String(maxRecords) + " records";
                 document.getElementById("answer").innerText = "";
@@ -35,7 +34,7 @@ export function doPart(part: PuzzlePart)
                     let recordLength = aValues[recordIndex].length;
                     let record = aValues[recordIndex].charCodeAt(recordLength - 1) == 13 ?
                         aValues[recordIndex].substr(0, recordLength - 1) : aValues[recordIndex];
-                    let moreRecords: Boolean = part.processRecord(record);
+                    let moreRecords: boolean = part.processRecord(record);
                     fileProgress.value = ++recordIndex;
                     if (moreRecords == true && recordIndex < maxRecords) window.setTimeout(processFileRecords, 0);
                     else
@@ -75,6 +74,6 @@ export abstract class PuzzlePart
         this.outputDisplay = outputElement;
         this.answerDisplay = answerElement;
     }
-    public processRecord(record: string) : Boolean { return true; }
+    public processRecord(record: string) : boolean { return true; }
     public displayAnswer() {}
 }

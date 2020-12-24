@@ -15,7 +15,6 @@ export function doPart(part) {
             let fr = new FileReader();
             fr.onloadend = function () {
                 let aValues = fr.result.split("\n");
-                // console.log(aValues);
                 let maxRecords = aValues.length;
                 document.getElementById("recordCount").innerText = String(maxRecords) + " records";
                 document.getElementById("answer").innerText = "";
