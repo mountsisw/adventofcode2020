@@ -26,6 +26,7 @@ solutions.set("21", {title: "Allergen Assessment", part1: "Day21/Part1.html", pa
 solutions.set("22", {title: "Crab Combat", part1: "Day22/Part1.html", part2: "Day22/Part2.html", bg: "Day22/Day22.png"});
 solutions.set("23", {title: "Crab Cups", part1: "Day23/Part1.html", part2: "Day23/Part2.html", bg: "Day23/Day23.png"});
 solutions.set("24", {title: "Lobby Layout", part1: "Day24/Part1.html", part2: "Day24/Part2.html", bg: "Day24/Day24.png"});
+solutions.set("25", {title: "Combo Breaker", part1: "Day25/Part1.html", part2: "Day25/Part2.html", bg: "Day25/Day25.png"});
 
 function init()
 {
